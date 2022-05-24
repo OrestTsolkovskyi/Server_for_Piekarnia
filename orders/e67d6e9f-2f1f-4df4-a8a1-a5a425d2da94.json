@@ -1,0 +1,22 @@
+[
+  {
+    "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
+    "image": "http://localhost:3333/apple-pie.jpg",
+    "name": "Apple pie",
+    "description": "Apple pie on semi-shortcrust pastry, layered with fried apples with cinnamon, sprinkled with coarse sugar",
+    "allergyInfo": "Contains gluten and milk",
+    "productionCost": 12,
+    "price": 42,
+    "quantity": 1
+  },
+  {
+    "uuid": "9c6f4173-b098-4e5e-9951-fb64d5db8c7a",
+    "image": "http://localhost:3333/cherry-cake.jpg",
+    "name": "Cherry cake",
+    "description": "Three layer chocolate torte with caramelized and alcoholized cherries",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 38,
+    "price": 85,
+    "quantity": 1
+  }
+]

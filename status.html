@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 2 API Server</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
+    }
+    button {
+      color: green;
+      padding: 0.5em;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function test() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", '/api/level2/test', true);
+
+      // Let the server know that we will use JSON body
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      // handle result when it becomes available
+      xhr.onreadystatechange = function() {
+          // for this simple code we don't care for other state changes than DONE
+          if (this.readyState !== XMLHttpRequest.DONE) return
+
+          switch (this.status) {
+            case 200: {
+              const responseContent = JSON.parse(this.responseText);
+              alert(`Success!\n${ responseContent.message} ${responseContent.recipientName}!`);
+              break
+            }
+            default: alert(`Error: ${this.status}`)
+          }
+      }
+
+      const requestParams = {
+        name: "Joe"
+      }
+
+      xhr.send(JSON.stringify(requestParams));
+    }
+  </script>
+</head>
+<body>
+  <h1>API Server status: OK</h1>
+  <button onclick="test()">Test endpoint with Joe</button>
+</body>
+</html>

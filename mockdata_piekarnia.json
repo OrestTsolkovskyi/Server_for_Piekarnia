@@ -1,0 +1,155 @@
+[
+  {
+    "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
+    "image": "http://localhost:3333/apple-pie.jpg",
+    "name": "Apple pie",
+    "description": "Apple pie on semi-shortcrust pastry, layered with fried apples with cinnamon, sprinkled with coarse sugar",
+    "allergyInfo": "Contains gluten and milk",
+    "productionCost": 12,
+    "price": 42
+  },
+  {
+    "uuid": "3b629a89-f4ed-43e8-99d5-d6f4645348a0",
+    "image": "http://localhost:3333/blueberry-cake.jpg",
+    "name": "Blueberry cake",
+    "description": "Three layers of cocoa cake, spread with whipped cream and blueberries",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 16,
+    "price": 58
+  },
+  {
+    "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
+    "image": "http://localhost:3333/brownie.jpg",
+    "name": "Brownie",
+    "description": "Classic brownie",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 8.2,
+    "price": 18.5
+  },
+  {
+    "uuid": "9d87931e-7996-4dd7-97f6-f420d73fc8bb",
+    "image": "http://localhost:3333/carrot-cake.jpg",
+    "name": "Carrot cake",
+    "description": "Deep-flavored carrot cake topped with whipped cream and sprinkled with nuts",
+    "allergyInfo": "Contains milk and nuts",
+    "productionCost": 14,
+    "price": 45
+  },
+  {
+    "uuid": "9c6f4173-b098-4e5e-9951-fb64d5db8c7a",
+    "image": "http://localhost:3333/cherry-cake.jpg",
+    "name": "Cherry cake",
+    "description": "Three layer chocolate torte with caramelized and alcoholized cherries",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 38,
+    "price": 85
+  },
+  {
+    "uuid": "c07014ec-f8a1-410f-bdc6-0a710af1d0f1",
+    "image": "http://localhost:3333/chocolate-cake.jpg",
+    "name": "Chocolate cake",
+    "description": "Chocolate cake layered with caramel cream in dark chocolate glaze",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 32,
+    "price": 67
+  },
+  {
+    "uuid": "d6f5f77a-d76e-4821-b0c1-5e95960d404d",
+    "image": "http://localhost:3333/chocolate-cookie.jpg",
+    "name": "Chocolate cookie",
+    "description": "A chocolate cookie filled with a melting blend of chocolates",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 3.5,
+    "price": 7
+  },
+  {
+    "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
+    "image": "http://localhost:3333/chocolate-donut.jpg",
+    "name": "Chocolate donut",
+    "description": "Classic donut fried in fresh, healthy vegetable fat with chocolate glaze",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 2.5,
+    "price": 6
+  },
+  {
+    "uuid": "07dcea6e-714f-44f7-bd3e-ff16ab4c4e7b",
+    "image": "http://localhost:3333/chocolate-muffin.jpg",
+    "name": "Chocolate muffin",
+    "description": "Muffin with chocolate filling and mint cream",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 3.8,
+    "price": 8
+  },
+  {
+    "uuid": "8826a801-c420-4a72-881d-93095c663c51",
+    "image": "http://localhost:3333/lemon-cake.jpg",
+    "name": "Lemon cake",
+    "description": "Lemon shortcake with frosting",
+    "allergyInfo": "Contains gluten",
+    "productionCost": 8,
+    "price": 32
+  },
+  {
+    "uuid": "cf36968c-1751-4683-a724-9d84d40cc3f0",
+    "image": "http://localhost:3333/macarons.jpg",
+    "name": "Macaron",
+    "description": "Colorful, meringue almond cookies layered with delicate vanilla cream",
+    "allergyInfo": "Contains milk and almonds",
+    "productionCost": 1.2,
+    "price": 4
+  },
+  {
+    "uuid": "36580a0b-c429-4b0e-8fd1-e6945c4b9a5c",
+    "image": "http://localhost:3333/nut-donut.jpg",
+    "name": "Nut donut",
+    "description": "Classic donut fried in fresh, healthy vegetable fat with walnut filling",
+    "allergyInfo": "Contains gluten, milk and nuts",
+    "productionCost": 2.8,
+    "price": 6.5
+  },
+  {
+    "uuid": "5260b68a-1d4e-4973-9a58-ebfc6be29ab1",
+    "image": "http://localhost:3333/oreo-cake.jpg",
+    "name": "Oreo cake",
+    "description": "Large Oreo cake with cocoa sponge cakes and mascarpone filling",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 33,
+    "price": 68
+  },
+  {
+    "uuid": "47a4959b-fe9b-42d7-9a64-4b1df60513af",
+    "image": "http://localhost:3333/raspberry-cake.jpg",
+    "name": "Raspberry cake",
+    "description": "Biscuit cake with whipped cream and raspberries",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 13.5,
+    "price": 45
+  },
+  {
+    "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
+    "image": "http://localhost:3333/strawberry-cake.jpg",
+    "name": "Strawberry cake",
+    "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 14.2,
+    "price": 45
+  },
+  {
+    "uuid": "f82836e9-113e-4215-b336-4b925c6be67f",
+    "image": "http://localhost:3333/tiramisu-cake.jpg",
+    "name": "Tiramisu",
+    "description": "Mascarpone cream with biscuits soaked in coffee and Amaretto liqueur, sprinkled with dark chocolate",
+    "allergyInfo": "Contains gluten, milk and cocoa",
+    "productionCost": 7,
+    "price": 16
+  },
+  {
+    "uuid": "2558067f-7172-423b-b2d4-6ed5165be2d1",
+    "image": "http://localhost:3333/vanilla-muffin.jpg",
+    "name": "Vanilla muffin",
+    "description": "Vanilla muffin with buttercream and caramelized cherry",
+    "allergyInfo": "Contains gluten and milk",
+    "productionCost": 3.5,
+    "price": 6
+  }
+]

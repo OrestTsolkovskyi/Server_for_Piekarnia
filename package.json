@@ -1,0 +1,17 @@
+{
+  "name": "minimal-openapi-server",
+  "version": "1.0.0",
+  "description": "Minimal server for OpenAPI",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-openapi-validator": "^4.13.4",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0"
+  }
+}

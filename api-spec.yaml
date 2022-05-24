@@ -1,0 +1,264 @@
+---
+openapi: 3.0.0
+info:
+  title: API for level 2 task
+  description: Initial API specification. To be refactored as a part of the task.
+  version: 0.0.1
+servers:
+- url: /api/level2
+  description: Prefix of the API endpoints
+paths:
+  /test:
+    post:
+      summary: Test endpoint
+      operationId: test
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TestParams'
+        required: true
+      responses:
+        '200':
+          description: Confirms that the endpoint works
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestResult'
+
+  /login:
+    post:
+      summary: Login endpoint
+      operationId: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginParams'
+      responses:
+        '200':
+          description: Confirms that the endpoint works an send user/admin/manager data
+        '401':
+          description: Error message - Shows that user/admin/manager is not logged
+
+  /signup:
+    post:
+      summary: Signup endpoint
+      operationId: signup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignupParams'
+      responses:
+        '200':
+          description: Confirms that the endpoint works and user is signed up
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SignupResult'
+
+  /products:
+    get:
+      summary: Products getter endpoint
+      operationId: get Products
+      responses:
+        '200':
+          description: Sending gotten products
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductsGETResult'
+        '401':
+          description: Error message - Denies access to products list
+
+  /bestsellers:
+    get:
+      summary: Bestsellers getter endpoint
+      operationId: get Bestsellers
+      responses:
+        '200':
+          description: Sending gotten bestsellers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BestsellersGETResult'
+        '401':
+          description: Error message - Denies access to bestsellers list
+
+  /orders:
+    get:
+      summary: User orders getter endpoint
+      operationId: get Orders
+      responses:
+        '200':
+          description: Sending gotten orders
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrdersGETResult'
+        '401':
+          description: Error message - Denies access to user orders list
+
+  /addOrders:
+    post:
+      summary: addOrders endpoint
+      operationId: addOrders
+      responses:
+        '200':
+          description: Confirms that the endpoint works and orders are added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddOrdersResult'
+
+  /allOrders:
+    get:
+      summary: All Orders getter endpoint
+      operationId: get All Orders
+      responses:
+        '200':
+          description: Sending gotten All Orders
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllOrdersGETResult'
+        '401':
+          description: Error message - Denies access to All Orders list
+
+  /logout:
+    post:
+      summary: Logout endpoint
+      operationId: logout
+      responses:
+        '200':
+          description: Confirms that the endpoint works and user is logged out
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LogoutResult'
+
+  /admin_logout:
+    post:
+      summary: Admin logout endpoint
+      operationId: Admin logout
+      responses:
+        '200':
+          description: Confirms that the endpoint works and admin is logged out
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminLogoutResult'
+
+  /manager_logout:
+    post:
+      summary: Manager logout endpoint
+      operationId: Manager logout
+      responses:
+        '200':
+          description: Confirms that the endpoint works and manager is logged out
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ManagerLogoutResult'
+components:
+  schemas:
+    TestParams:
+      required:
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+
+    LoginParams:
+      required:
+        - username
+        - password
+      type: object
+      properties:
+        name:
+          type: string
+
+    SignupParams:
+      required:
+        - name
+        - username
+        - password
+        - repeatpassword
+      type: object
+      properties:
+        name:
+          type: string
+
+    SignupResult:
+      required:
+        - message
+      type: object
+      properties:
+        message:
+          type: string
+
+    LogoutResult:
+      required:
+        - message
+      type: object
+      properties:
+        message:
+          type: string
+
+    AdminLogoutResult:
+      required:
+        - message
+      type: object
+      properties:
+        message:
+          type: string
+
+    ManagerLogoutResult:
+      required:
+        - message
+      type: object
+      properties:
+        message:
+          type: string
+
+    TestResult:
+      required:
+      - message
+      - recipientName
+      type: object
+      properties:
+        message:
+          type: string
+        recipientName:
+          type: string
+
+
+    ProductsGETResult:
+      required:
+        - object
+      type: object
+
+    BestsellersGETResult:
+      required:
+        - object
+      type: object
+
+    OrdersGETResult:
+      required:
+        - object
+      type: object
+
+    AddOrdersResult:
+      required:
+        - message
+      type: object
+      properties:
+        message:
+          type: string
+
+    AllOrdersGETResult:
+      required:
+        - object
+      type: object
