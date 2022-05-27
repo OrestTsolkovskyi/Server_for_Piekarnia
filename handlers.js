@@ -2,8 +2,6 @@ import fs from 'fs'
 import {readFile} from 'fs/promises';
 import _ from 'lodash';
 import x from "lodash";
-import path from "path";
-
 
 export function handleTest(req, res) {
     return res.status(200).json({
@@ -16,12 +14,14 @@ export async function handleSignup(req, res) {
     const usersJson = JSON.parse(await readFile(new URL('./users.json', import.meta.url)));
     console.log(usersJson)
     req.body.token = Date.now()
+
     function uuid() {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
             const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
     }
+
     req.body.uuid = uuid()
     usersJson.push(req.body)
     fs.writeFileSync('users.json', JSON.stringify(usersJson, null, 2), function (err) {
@@ -38,7 +38,7 @@ export async function handleLogin(req, res) {
     const user = _.find(users, {username: req.body.username, password: req.body.password});
     console.log(user)
 
-        return res.status(200).json(user);
+    return res.status(200).json(user);
 }
 
 
@@ -53,7 +53,7 @@ export async function handleLogout(req, res) {
     });
 
     return res.status(200).json({
-        message:'Success logout'
+        message: 'Success logout'
     });
 }
 
@@ -103,24 +103,6 @@ export function handleGetOrders(req, res) {
     }
     return res.status(200).json(userOrders)
 }
-//     const usersJson = JSON.parse(fs.readFileSync('./users.json'))
-//     const user = _.find(usersJson, {token: +req.headers.authorization})
-//
-//
-//     if (fs.existsSync(`orders/${user.uuid}.json`)) {
-//         const fileData = fs.readFileSync(`orders/${user.uuid}.json`)
-//         try {
-//             const orders = JSON.parse(fileData)
-//             return res.status(200).json(orders)
-//         } catch (e) {
-//             // file found and is empty
-//             return res.status(200).json([])
-//         }
-//     } else {
-//         // file not found
-//         return res.status(200).json([])
-//     }
-// }
 
 export function handleAddOrders(req, res) {
     const orders = JSON.parse(fs.readFileSync('ordersList.json'));
@@ -142,54 +124,33 @@ export function handleAddOrders(req, res) {
     })
 }
 
-//     if (fs.existsSync(`orders/${user.uuid}.json`)) {
-//         const fileData = fs.readFileSync(`orders/${user.uuid}.json`)
-//         try {
-//             const orders = JSON.parse(fileData)
-//             orders.push(...req.body)
-//
-//             fs.writeFileSync(`orders/${user.uuid}.json`, JSON.stringify(orders, null, 2), function (err) {
-//                 console.log(err);
-//             });
-//             return res.status(200).json({
-//                 message: 'Success'
-//             })
-//         } catch (e) {
-//             // file found and is empty
-//             fs.writeFileSync(`orders/${user.uuid}.json`, JSON.stringify(req.body, null, 2), function (err) {
-//                 console.log(err);
-//             });
-//             return res.status(200).json({
-//                 message: 'Success'
-//             })
-//         }
-//     } else {
-//         // file not found
-//         fs.writeFileSync(`orders/${user.uuid}.json`, JSON.stringify(req.body, null, 2), function (err) {
-//             console.log(err);
-//         });
-//         return res.status(200).json({
-//             message: 'Success'
-//         })
-//     }
-// }
-
 export async function handleChangeStatus(req, res) {
     const ordersList = JSON.parse(fs.readFileSync('ordersList.json'))
-    // const usersJson = JSON.parse(fs.readFileSync('./users.json'));
-    const userOrders = _.find( ordersList, { user_uuid: req.body.user.user_uuid })?.user_orders
-    const currentOrder = _.find( userOrders,  {order_uuid: req.body.order.order_uuid})
+    const userOrders = _.find(ordersList, {user_uuid: req.body.user.user_uuid})?.user_orders
+    const currentOrder = _.find(userOrders, {order_uuid: req.body.order.order_uuid})
     if (currentOrder) {
         currentOrder.status = req.body.status
     }
     fs.writeFileSync('ordersList.json', JSON.stringify(ordersList, null, 2), function (err) {
         console.log(err);
     });
-        console.log('lol', ordersList)
-        return res.status(200).json({
-            message: 'Status changed'
-        })
+    console.log('lol', ordersList)
+    return res.status(200).json({
+        message: 'Status changed'
+    })
 }
+
+export async function handleUserStatusProgress(req, res) {
+    const orders = JSON.parse(fs.readFileSync('ordersList.json'))
+
+    const result = orders.map(({user_uuid, user_orders}) => ({
+        user_uuid,
+        declinedCount: user_orders.filter(({status}) => status === 'Preparing').length/user_orders.length * 100
+    }))
+    console.log(result)
+    return res.status(200).json(result)
+}
+
 
 export async function handleAdminLogout(req, res) {
     const users = JSON.parse(await readFile('users.json'));
@@ -202,7 +163,7 @@ export async function handleAdminLogout(req, res) {
     });
 
     return res.status(200).json({
-        message:'Success logout'
+        message: 'Success logout'
     });
 }
 
@@ -229,15 +190,15 @@ export async function handleManagerLogout(req, res) {
     });
 
     return res.status(200).json({
-        message:'Success logout'
+        message: 'Success logout'
     });
 }
 
 export async function handleRemoveOrderItem(req, res) {
     const ordersList = JSON.parse(fs.readFileSync('ordersList.json'))
-    const userOrders = _.find( ordersList, { user_uuid: req.body.userUuid })?.user_orders
-    const order = _.find( userOrders, { order_uuid: req.body.orderUuid })?.products
-    const product = _.find( order, { uuid: req.body.productUuid})
+    const userOrders = _.find(ordersList, {user_uuid: req.body.userUuid})?.user_orders
+    const order = _.find(userOrders, {order_uuid: req.body.orderUuid})?.products
+    const product = _.find(order, {uuid: req.body.productUuid})
     const orderItemIndex = order.indexOf(product)
 
     if (product) {
@@ -253,9 +214,8 @@ export async function handleRemoveOrderItem(req, res) {
 
 export async function handleAMDeclineOrder(req, res) {
     const ordersList = JSON.parse(fs.readFileSync('ordersList.json'))
-    const userOrders = _.find( ordersList, { user_uuid: req.body.userUuid })?.user_orders
-    const order = _.find( userOrders, { order_uuid: req.body.orderUuid })
-    // const orderIndex = userOrders.indexOf(order)
+    const userOrders = _.find(ordersList, {user_uuid: req.body.userUuid})?.user_orders
+    const order = _.find(userOrders, {order_uuid: req.body.orderUuid})
     if (order) {
         order.status = 'Declined'
     }
@@ -266,14 +226,3 @@ export async function handleAMDeclineOrder(req, res) {
         message: 'Order declined'
     })
 }
-//     // const users = JSON.parse(fs.readFileSync('users.json'))
-//     const orders = JSON.parse(fs.readFileSync('ordersList.json'))
-//
-//     const declined = orders.map((item) => {
-//         const copy = {...item}
-//         copy.user_orders = delete copy.user_orders
-//         return copy
-//     })
-//
-//     return res.status(200).json(declined)
-// }

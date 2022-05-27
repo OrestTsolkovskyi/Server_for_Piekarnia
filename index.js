@@ -35,7 +35,6 @@ app.use(json());
 // Server should provide a trivial test page at address localhost:3333/status (suits for quick test if the API Server works)
 app.use('/status', express.static('status.html')),
 app.use(express.static('gallery'))
-// app.use('/cities', express.static('mockdata.json'))
 
 // app.use('/login', (req, res) => res.status(200).json({
 //   message: 'Successful',
@@ -74,7 +73,8 @@ import {
     handleManagerLogout,
     handleAdminGetOrders,
     handleAMDeclineOrder,
-    handleChangeStatus
+    handleChangeStatus,
+    handleUserStatusProgress
 } from './handlers.js';
 
 //User
@@ -95,6 +95,7 @@ app.post('/admin_logout', handleAdminLogout)
 app.post('/manager_logout', handleManagerLogout)
 
 app.get('/allOrders', handleAdminGetOrders)
+app.get('/progressStatus', handleUserStatusProgress)
 
 app.post('/removeOrderItem', handleRemoveOrderItem)
 app.post('/declineOrder', handleAMDeclineOrder)

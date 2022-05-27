@@ -126,6 +126,20 @@ paths:
         '401':
           description: Error message - Denies access to All Orders list
 
+  /progressStatus:
+    get:
+      summary: Progress status getter endpoint
+      operationId: get Progress status
+      responses:
+        '200':
+          description: Sending gotten Progress status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProgressStatusGETResult'
+        '401':
+          description: Error message - Denies access to Progress status data
+
   /logout:
     post:
       summary: Logout endpoint
@@ -259,6 +273,11 @@ components:
           type: string
 
     AllOrdersGETResult:
+      required:
+        - object
+      type: object
+
+    ProgressStatusGETResult:
       required:
         - object
       type: object
