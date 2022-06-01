@@ -126,6 +126,42 @@ paths:
         '401':
           description: Error message - Denies access to All Orders list
 
+  /removeOrderItem:
+    post:
+      summary: removeOrderItem endpoint
+      operationId: removeOrderItem
+      responses:
+        '200':
+          description: Confirms that the endpoint works and item(s) from order removed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RemoveOrderItemResult'
+
+  /declineOrder:
+    post:
+      summary: declineOrder endpoint
+      operationId: declineOrder
+      responses:
+        '200':
+          description: Confirms that the endpoint works and order is declined
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeclineOrderResult'
+
+  /changeStatus:
+    post:
+      summary: changeStatus endpoint
+      operationId: changeStatus
+      responses:
+        '200':
+          description: Confirms that the endpoint works and order status is changed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChangeStatusResult'
+
   /progressStatus:
     get:
       summary: Progress status getter endpoint
@@ -281,3 +317,18 @@ components:
       required:
         - object
       type: object
+
+    RemoveOrderItemResult:
+      required:
+        - message
+      type: string
+
+    DeclineOrderResult:
+      required:
+        - message
+      type: string
+
+    ChangeStatusResult:
+      required:
+        - message
+      type: string

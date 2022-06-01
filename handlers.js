@@ -64,13 +64,20 @@ export async function handleGetProducts(req, res) {
     console.log(JSON.stringify(req.headers.authorization));
 
     const userToken = _.find(users, {token: +req.headers.authorization})
+    const language = req.headers['content-language']
 
     if (userToken === undefined) {
         return res.status(401).json({
             message: 'Not found'
         })
     }
-    return res.status(200).send(JSON.stringify(products, null, 2))
+    return res.status(200).send(JSON.stringify(products.map((product) => {
+        product.name = product.name[language]
+        product.description = product.description[language]
+        product.allergyInfo = product.allergyInfo[language]
+        return product
+        }
+    ), null, 2))
 }
 
 export async function handleBestsellers(req, res) {
@@ -80,13 +87,20 @@ export async function handleBestsellers(req, res) {
     console.log(JSON.stringify(req.headers.authorization));
 
     const userToken = _.find(users, {token: +req.headers.authorization})
+    const language = req.headers['content-language']
 
     if (userToken === undefined) {
         return res.status(401).json({
             message: 'Not found'
         })
     }
-    return res.status(200).send(JSON.stringify(bestsellers, null, 2))
+    return res.status(200).send(JSON.stringify(bestsellers.map((product) => {
+            product.name = product.name[language]
+            product.description = product.description[language]
+            product.allergyInfo = product.allergyInfo[language]
+            return product
+        }
+    ), null, 2))
 }
 
 export function handleGetOrders(req, res) {

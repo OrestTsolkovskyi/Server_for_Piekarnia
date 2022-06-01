@@ -2,54 +2,108 @@
   {
     "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
     "image": "http://localhost:3333/apple-pie.jpg",
-    "name": "Apple pie",
-    "description": "Apple pie on semi-shortcrust pastry, layered with fried apples with cinnamon, sprinkled with coarse sugar",
-    "allergyInfo": "Contains gluten and milk",
+    "name": {
+      "en-US": "Apple pie",
+      "pl": "Szarlotka"
+    },
+    "description": {
+      "en-US": "Apple pie on semi-shortcrust pastry, layered with fried apples with cinnamon, sprinkled with coarse sugar",
+      "pl": "Szarlotka na półkruchym spodzie, przekładana smażonymi jabłkami z cynamonem, posypana cukrem gruboziarnistym"
+    },
+    "allergyInfo": {
+      "en-US": "Contains gluten and milk",
+      "pl": "Zawiera gluten i mleko"
+    },
     "productionCost": 12,
     "price": 42
   },
   {
     "uuid": "9c6f4173-b098-4e5e-9951-fb64d5db8c7a",
     "image": "http://localhost:3333/cherry-cake.jpg",
-    "name": "Cherry cake",
-    "description": "Three layer chocolate torte with caramelized and alcoholized cherries",
-    "allergyInfo": "Contains gluten, milk and cocoa",
+    "name": {
+      "en-US": "Cherry cake",
+      "pl": "Ciasto z wiśniami"
+    },
+    "description": {
+      "en-US": "Three layer chocolate torte with caramelized and alcoholized cherries",
+      "pl": "Trójwarstowy tort czekoladowy z dodatkiem wiśni karmelizowanych i akoholizowanych"
+    },
+    "allergyInfo": {
+      "en-US": "Contains gluten, milk and cocoa",
+      "pl": "Zawiera gluten, mleko i kakao"
+    },
     "productionCost": 38,
     "price": 85
   },
   {
     "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
     "image": "http://localhost:3333/chocolate-donut.jpg",
-    "name": "Chocolate donut",
-    "description": "Classic donut fried in fresh, healthy vegetable fat with chocolate glaze",
-    "allergyInfo": "Contains gluten, milk and cocoa",
+    "name": {
+      "en-US": "Chocolate cake",
+      "pl": "Ciasto czekoladowe"
+    },
+    "description": {
+      "en-US": "Chocolate cake layered with caramel cream in dark chocolate glaze",
+      "pl": "Ciasto czekoladowe, przekładane kremem karmelowym w polewie z gorzkiej czekolady"
+    },
+    "allergyInfo": {
+      "en-US": "Contains gluten, milk and cocoa",
+      "pl": "Zawiera gluten, mleko i kakao"
+    },
     "productionCost": 2.5,
     "price": 6
   },
   {
     "uuid": "07dcea6e-714f-44f7-bd3e-ff16ab4c4e7b",
     "image": "http://localhost:3333/chocolate-muffin.jpg",
-    "name": "Chocolate muffin",
-    "description": "Muffin with chocolate filling and mint cream",
-    "allergyInfo": "Contains gluten, milk and cocoa",
+    "name": {
+      "en-US": "Chocolate cookie",
+      "pl": "Ciasteczko czekoladowe"
+    },
+    "description": {
+      "en-US": "A chocolate cookie filled with a melting blend of chocolates",
+      "pl": "Ciasteczko czekoladowe wypełnione rozpływającą się mieszaniną czekola"
+    },
+    "allergyInfo": {
+      "en-US": "Contains gluten, milk and cocoa",
+      "pl": "Zawiera gluten, mleko i kakao"
+    },
     "productionCost": 3.8,
     "price": 8
   },
   {
     "uuid": "5260b68a-1d4e-4973-9a58-ebfc6be29ab1",
     "image": "http://localhost:3333/oreo-cake.jpg",
-    "name": "Oreo cake",
-    "description": "Large Oreo cake with cocoa sponge cakes and mascarpone filling",
-    "allergyInfo": "Contains gluten, milk and cocoa",
+    "name": {
+      "en-US": "Oreo cake",
+      "pl": "Ciasto Oreo"
+    },
+    "description": {
+      "en-US": "Large Oreo cake with cocoa sponge cakes and mascarpone filling",
+      "pl": "Duże ciasto Oreo z kakaowymi biszkoptami i nadzieniem mascarpone"
+    },
+    "allergyInfo": {
+      "en-US": "Contains gluten, milk and cocoa",
+      "pl": "Zawiera gluten, mleko i kakao"
+    },
     "productionCost": 33,
     "price": 68
   },
   {
     "uuid": "2558067f-7172-423b-b2d4-6ed5165be2d1",
     "image": "http://localhost:3333/vanilla-muffin.jpg",
-    "name": "Vanilla muffin",
-    "description": "Vanilla muffin with buttercream and caramelized cherry",
-    "allergyInfo": "Contains gluten and milk",
+    "name": {
+      "en-US": "Vanilla muffin",
+      "pl": "Babeczka waniliowa"
+    },
+    "description": {
+      "en-US": "Vanilla muffin with buttercream and caramelized cherry",
+      "pl": "Babeczka waniliowa z kremem i karmelizowaną wiśnią"
+    },
+    "allergyInfo": {
+      "en-US": "Contains gluten and milk",
+      "pl": "Zawiera gluten i mlekok"
+    },
     "productionCost": 3.5,
     "price": 6
   }

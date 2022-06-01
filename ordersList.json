@@ -3,89 +3,119 @@
     "user_uuid": "d2b95caa-1ff8-4070-8ea0-1d7179c7e3a2",
     "user_orders": [
       {
-        "order_uuid": "cc6b4be6-fe08-40f1-8d75-6affa2b6f6f0",
-        "date": "2022-05-14 22:50",
-        "order_total": 211,
-        "order_production_cost": 64.4,
+        "order_uuid": "4d05fb4a-285d-4b75-95b3-dbee09b831e7",
+        "date": "2022-06-02 20:40",
+        "order_total": 260.5,
+        "order_production_cost": 76.2,
         "status": "Declined",
         "products": [
           {
+            "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
+            "image": "http://localhost:3333/apple-pie.jpg",
+            "name": "Szarlotka",
+            "description": "Szarlotka na półkruchym spodzie, przekładana smażonymi jabłkami z cynamonem, posypana cukrem gruboziarnistym",
+            "allergyInfo": "Zawiera gluten i mleko",
+            "productionCost": 12,
+            "price": 42,
+            "quantity": 3
+          },
+          {
             "uuid": "3b629a89-f4ed-43e8-99d5-d6f4645348a0",
             "image": "http://localhost:3333/blueberry-cake.jpg",
-            "name": "Blueberry cake",
-            "description": "Three layers of cocoa cake, spread with whipped cream and blueberries",
-            "allergyInfo": "Contains gluten, milk and cocoa",
+            "name": "Ciasto z borówkami",
+            "description": "Trzy warstwy ciasta kakaowego, przekładane kremem z bitej śmietany z borówkami",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
             "productionCost": 16,
             "price": 58,
-            "quantity": 3
+            "quantity": 2
           },
           {
             "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
             "image": "http://localhost:3333/brownie.jpg",
             "name": "Brownie",
-            "description": "Classic brownie",
-            "allergyInfo": "Contains gluten, milk and cocoa",
+            "description": "Klasyczne brownie",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
             "productionCost": 8.2,
             "price": 18.5,
-            "quantity": 2
+            "quantity": 1
           }
         ]
       },
       {
-        "order_uuid": "cc6b3be6-fe08-40f1-8d75-6affa2b6f6f0",
-        "date": "2022-05-14 22:50",
-        "order_total": 211,
-        "order_production_cost": 64.4,
-        "status": "Declined",
-        "products": [
-          {
-            "uuid": "3b629a89-f4ed-43e8-99d5-d6f4645348a0",
-            "image": "http://localhost:3333/blueberry-cake.jpg",
-            "name": "Blueberry cake",
-            "description": "Three layers of cocoa cake, spread with whipped cream and blueberries",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 16,
-            "price": 58,
-            "quantity": 3
-          },
-          {
-            "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
-            "image": "http://localhost:3333/brownie.jpg",
-            "name": "Brownie",
-            "description": "Classic brownie",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 8.2,
-            "price": 18.5,
-            "quantity": 2
-          }
-        ]
-      },
-      {
-        "order_uuid": "cc6b6be6-fe08-40f1-8d75-6affa2b6f6f0",
-        "date": "2022-05-14 22:50",
-        "order_total": 211,
-        "order_production_cost": 64.4,
+        "order_uuid": "3c33cc63-69f6-4ab9-b075-7c21a3f360e0",
+        "date": "2023-05-10 11:30",
+        "order_total": 534,
+        "order_production_cost": 243,
         "status": "Preparing",
         "products": [
           {
-            "uuid": "3b629a89-f4ed-43e8-99d5-d6f4645348a0",
-            "image": "http://localhost:3333/blueberry-cake.jpg",
-            "name": "Blueberry cake",
-            "description": "Three layers of cocoa cake, spread with whipped cream and blueberries",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 16,
-            "price": 58,
-            "quantity": 3
+            "uuid": "c07014ec-f8a1-410f-bdc6-0a710af1d0f1",
+            "image": "http://localhost:3333/chocolate-cake.jpg",
+            "name": "Ciasto czekoladowe",
+            "description": "Ciasto czekoladowe, przekładane kremem karmelowym w polewie z gorzkiej czekolady",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 32,
+            "price": 67,
+            "quantity": 1
           },
           {
-            "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
-            "image": "http://localhost:3333/brownie.jpg",
-            "name": "Brownie",
-            "description": "Classic brownie",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 8.2,
-            "price": 18.5,
-            "quantity": 2
+            "uuid": "d6f5f77a-d76e-4821-b0c1-5e95960d404d",
+            "image": "http://localhost:3333/chocolate-cookie.jpg",
+            "name": "Ciasteczko czekoladowe",
+            "description": "Ciasteczko czekoladowe wypełnione rozpływającą się mieszaniną czekola",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 3.5,
+            "price": 7,
+            "quantity": 6
+          },
+          {
+            "uuid": "9c6f4173-b098-4e5e-9951-fb64d5db8c7a",
+            "image": "http://localhost:3333/cherry-cake.jpg",
+            "name": "Ciasto z wiśniami",
+            "description": "Trójwarstowy tort czekoladowy z dodatkiem wiśni karmelizowanych i akoholizowanych",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 38,
+            "price": 85,
+            "quantity": 5
+          }
+        ]
+      },
+      {
+        "order_uuid": "996a2ee8-fa68-46a3-a0c5-5f8b94b2cfc6",
+        "date": "2023-05-05 15:20",
+        "order_total": 248,
+        "order_production_cost": 75.6,
+        "status": "Preparing",
+        "products": [
+          {
+            "uuid": "8826a801-c420-4a72-881d-93095c663c51",
+            "image": "http://localhost:3333/lemon-cake.jpg",
+            "name": "Ciasto cytrynowe",
+            "description": "Kruche ciasto cytrynowe z lukrem",
+            "allergyInfo": "Zawiera gluten",
+            "productionCost": 8,
+            "price": 32,
+            "quantity": 1
+          },
+          {
+            "uuid": "cf36968c-1751-4683-a724-9d84d40cc3f0",
+            "image": "http://localhost:3333/macarons.jpg",
+            "name": "Makaronik",
+            "description": "Kolorowe, bezowe ciasteczka migdałowe przełożone delikatnym kremem waniliowym",
+            "allergyInfo": "Zawiera mleko i migdały",
+            "productionCost": 1.2,
+            "price": 4,
+            "quantity": 9
+          },
+          {
+            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
+            "image": "http://localhost:3333/strawberry-cake.jpg",
+            "name": "Ciasto z truskawkami",
+            "description": "Ciasto biszkoptowe z kremem i musem truskawowym, ozdobione owocami",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 14.2,
+            "price": 45,
+            "quantity": 4
           }
         ]
       }
@@ -95,232 +125,129 @@
     "user_uuid": "e0a01a11-ae25-4093-96a8-21a62c2c3596",
     "user_orders": [
       {
-        "order_uuid": "55bf3ad0-9c08-469f-8230-a70b00c6bb5d",
-        "date": "2022-05-19 20:40",
-        "order_total": 327,
-        "order_production_cost": 101.6,
-        "status": "Preparing",
-        "products": [
-          {
-            "uuid": "47a4959b-fe9b-42d7-9a64-4b1df60513af",
-            "image": "http://localhost:3333/raspberry-cake.jpg",
-            "name": "Raspberry cake",
-            "description": "Biscuit cake with whipped cream and raspberries",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 13.5,
-            "price": 45,
-            "quantity": 4
-          },
-          {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
-            "price": 45,
-            "quantity": 3
-          },
-          {
-            "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
-            "image": "http://localhost:3333/chocolate-donut.jpg",
-            "name": "Chocolate donut",
-            "description": "Classic donut fried in fresh, healthy vegetable fat with chocolate glaze",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 2.5,
-            "price": 6,
-            "quantity": 2
-          }
-        ]
-      },
-      {
-        "order_uuid": "57bf3ad0-9c08-469f-8230-a70b00c6bb5d",
-        "date": "2022-05-19 20:40",
-        "order_total": 327,
-        "order_production_cost": 101.6,
+        "order_uuid": "5de931e2-db6c-4d97-875f-04600c9d713e",
+        "date": "2022-06-10 04:30",
+        "order_total": 391,
+        "order_production_cost": 178,
         "status": "Declined",
         "products": [
           {
-            "uuid": "47a4959b-fe9b-42d7-9a64-4b1df60513af",
-            "image": "http://localhost:3333/raspberry-cake.jpg",
-            "name": "Raspberry cake",
-            "description": "Biscuit cake with whipped cream and raspberries",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 13.5,
-            "price": 45,
-            "quantity": 4
+            "uuid": "9c6f4173-b098-4e5e-9951-fb64d5db8c7a",
+            "image": "http://localhost:3333/cherry-cake.jpg",
+            "name": "Ciasto z wiśniami",
+            "description": "Trójwarstowy tort czekoladowy z dodatkiem wiśni karmelizowanych i akoholizowanych",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 38,
+            "price": 85,
+            "quantity": 2
           },
           {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
-            "price": 45,
+            "uuid": "c07014ec-f8a1-410f-bdc6-0a710af1d0f1",
+            "image": "http://localhost:3333/chocolate-cake.jpg",
+            "name": "Ciasto czekoladowe",
+            "description": "Ciasto czekoladowe, przekładane kremem karmelowym w polewie z gorzkiej czekolady",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 32,
+            "price": 67,
             "quantity": 3
           },
           {
-            "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
-            "image": "http://localhost:3333/chocolate-donut.jpg",
-            "name": "Chocolate donut",
-            "description": "Classic donut fried in fresh, healthy vegetable fat with chocolate glaze",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 2.5,
-            "price": 6,
-            "quantity": 2
+            "uuid": "cf36968c-1751-4683-a724-9d84d40cc3f0",
+            "image": "http://localhost:3333/macarons.jpg",
+            "name": "Makaronik",
+            "description": "Kolorowe, bezowe ciasteczka migdałowe przełożone delikatnym kremem waniliowym",
+            "allergyInfo": "Zawiera mleko i migdały",
+            "productionCost": 1.2,
+            "price": 4,
+            "quantity": 5
           }
         ]
-      }
-    ]
-  },
-  {
-    "user_uuid": "f16bbeaf-ec92-40be-b587-1b9441218d4b",
-    "user_orders": [
+      },
       {
-        "order_uuid": "95976e4d-65f3-4016-9ed6-ce2ba33be61c",
-        "date": "2022-05-25 13:30",
-        "order_total": 297,
-        "order_production_cost": 94.9,
+        "order_uuid": "b0b255c1-a38d-4740-9776-f1b742786e5f",
+        "date": "2022-06-02 19:30",
+        "order_total": 330,
+        "order_production_cost": 147,
         "status": "Declined",
         "products": [
           {
-            "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
-            "image": "http://localhost:3333/apple-pie.jpg",
-            "name": "Apple pie",
-            "description": "Apple pie on semi-shortcrust pastry, layered with fried apples with cinnamon, sprinkled with coarse sugar",
-            "allergyInfo": "Contains gluten and milk",
-            "productionCost": 12,
-            "price": 42,
-            "quantity": 1
-          },
-          {
-            "uuid": "9d87931e-7996-4dd7-97f6-f420d73fc8bb",
-            "image": "http://localhost:3333/carrot-cake.jpg",
-            "name": "Carrot cake",
-            "description": "Deep-flavored carrot cake topped with whipped cream and sprinkled with nuts",
-            "allergyInfo": "Contains milk and nuts",
-            "productionCost": 14,
-            "price": 45,
+            "uuid": "5260b68a-1d4e-4973-9a58-ebfc6be29ab1",
+            "image": "http://localhost:3333/oreo-cake.jpg",
+            "name": "Ciasto Oreo",
+            "description": "Duże ciasto Oreo z kakaowymi biszkoptami i nadzieniem mascarpone",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 33,
+            "price": 68,
             "quantity": 3
           },
           {
-            "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
-            "image": "http://localhost:3333/chocolate-donut.jpg",
-            "name": "Chocolate donut",
-            "description": "Classic donut fried in fresh, healthy vegetable fat with chocolate glaze",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 2.5,
-            "price": 6,
-            "quantity": 5
-          },
-          {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
+            "uuid": "47a4959b-fe9b-42d7-9a64-4b1df60513af",
+            "image": "http://localhost:3333/raspberry-cake.jpg",
+            "name": "Ciasto z malinami",
+            "description": "Biszkoptowe ciasto z bitą śmietaną i malinami",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 13.5,
             "price": 45,
             "quantity": 2
+          },
+          {
+            "uuid": "2558067f-7172-423b-b2d4-6ed5165be2d1",
+            "image": "http://localhost:3333/vanilla-muffin.jpg",
+            "name": "Babeczka waniliowa",
+            "description": "Babeczka waniliowa z kremem i karmelizowaną wiśnią",
+            "allergyInfo": "Zawiera gluten i mlekok",
+            "productionCost": 3.5,
+            "price": 6,
+            "quantity": 6
           }
         ]
       },
       {
-        "order_uuid": "85976e4d-65f3-4016-9ed6-ce2ba33be61c",
-        "date": "2022-05-25 13:30",
-        "order_total": 297,
-        "order_production_cost": 94.9,
+        "order_uuid": "74290078-babe-4a51-a824-c990bd0e9e63",
+        "date": "2022-06-16 16:15",
+        "order_total": 163.5,
+        "order_production_cost": 50.2,
         "status": "Preparing",
         "products": [
           {
             "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
             "image": "http://localhost:3333/apple-pie.jpg",
-            "name": "Apple pie",
-            "description": "Apple pie on semi-shortcrust pastry, layered with fried apples with cinnamon, sprinkled with coarse sugar",
-            "allergyInfo": "Contains gluten and milk",
+            "name": "Szarlotka",
+            "description": "Szarlotka na półkruchym spodzie, przekładana smażonymi jabłkami z cynamonem, posypana cukrem gruboziarnistym",
+            "allergyInfo": "Zawiera gluten i mleko",
             "productionCost": 12,
             "price": 42,
             "quantity": 1
           },
           {
-            "uuid": "9d87931e-7996-4dd7-97f6-f420d73fc8bb",
-            "image": "http://localhost:3333/carrot-cake.jpg",
-            "name": "Carrot cake",
-            "description": "Deep-flavored carrot cake topped with whipped cream and sprinkled with nuts",
-            "allergyInfo": "Contains milk and nuts",
-            "productionCost": 14,
-            "price": 45,
-            "quantity": 3
+            "uuid": "3b629a89-f4ed-43e8-99d5-d6f4645348a0",
+            "image": "http://localhost:3333/blueberry-cake.jpg",
+            "name": "Ciasto z borówkami",
+            "description": "Trzy warstwy ciasta kakaowego, przekładane kremem z bitej śmietany z borówkami",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 16,
+            "price": 58,
+            "quantity": 1
           },
           {
-            "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
-            "image": "http://localhost:3333/chocolate-donut.jpg",
-            "name": "Chocolate donut",
-            "description": "Classic donut fried in fresh, healthy vegetable fat with chocolate glaze",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 2.5,
-            "price": 6,
-            "quantity": 5
-          },
-          {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
-            "price": 45,
-            "quantity": 2
-          }
-        ]
-      },
-      {
-        "order_uuid": "75976e4d-65f3-4016-9ed6-ce2ba33be61c",
-        "date": "2022-05-25 13:30",
-        "order_total": 297,
-        "order_production_cost": 94.9,
-        "status": "Preparing",
-        "products": [
-          {
-            "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
-            "image": "http://localhost:3333/apple-pie.jpg",
-            "name": "Apple pie",
-            "description": "Apple pie on semi-shortcrust pastry, layered with fried apples with cinnamon, sprinkled with coarse sugar",
-            "allergyInfo": "Contains gluten and milk",
-            "productionCost": 12,
-            "price": 42,
+            "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
+            "image": "http://localhost:3333/brownie.jpg",
+            "name": "Brownie",
+            "description": "Klasyczne brownie",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 8.2,
+            "price": 18.5,
             "quantity": 1
           },
           {
             "uuid": "9d87931e-7996-4dd7-97f6-f420d73fc8bb",
             "image": "http://localhost:3333/carrot-cake.jpg",
-            "name": "Carrot cake",
-            "description": "Deep-flavored carrot cake topped with whipped cream and sprinkled with nuts",
-            "allergyInfo": "Contains milk and nuts",
+            "name": "Ciasto marchewkowe",
+            "description": "Ciasto marchewkowe o głębokim smaku, z bitą śmietaną, posypane orzechami",
+            "allergyInfo": "Zawiera mleko i orzechy",
             "productionCost": 14,
             "price": 45,
-            "quantity": 3
-          },
-          {
-            "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
-            "image": "http://localhost:3333/chocolate-donut.jpg",
-            "name": "Chocolate donut",
-            "description": "Classic donut fried in fresh, healthy vegetable fat with chocolate glaze",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 2.5,
-            "price": 6,
-            "quantity": 5
-          },
-          {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
-            "price": 45,
-            "quantity": 2
+            "quantity": 1
           }
         ]
       }
@@ -330,198 +257,138 @@
     "user_uuid": "e50d6059-e7a0-491a-bb25-3b06d1da514d",
     "user_orders": [
       {
-        "order_uuid": "7c5c9cc6-2b5a-460a-aad0-882073838dab",
-        "date": "2022-05-26 11:00",
-        "order_total": 151,
-        "order_production_cost": 62.09,
+        "order_uuid": "3a011b25-de66-4986-b761-8e2cd5c6d52c",
+        "date": "2022-06-08 10:00",
+        "order_total": 234,
+        "order_production_cost": 106.5,
         "status": "Preparing",
         "products": [
           {
             "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
             "image": "http://localhost:3333/brownie.jpg",
             "name": "Brownie",
-            "description": "Classic brownie",
-            "allergyInfo": "Contains gluten, milk and cocoa",
+            "description": "Klasyczne brownie",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
             "productionCost": 8.2,
             "price": 18.5,
-            "quantity": 2
+            "quantity": 10
           },
           {
             "uuid": "d6f5f77a-d76e-4821-b0c1-5e95960d404d",
             "image": "http://localhost:3333/chocolate-cookie.jpg",
-            "name": "Chocolate cookie",
-            "description": "A chocolate cookie filled with a melting blend of chocolates",
-            "allergyInfo": "Contains gluten, milk and cocoa",
+            "name": "Ciasteczko czekoladowe",
+            "description": "Ciasteczko czekoladowe wypełnione rozpływającą się mieszaniną czekola",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
             "productionCost": 3.5,
             "price": 7,
-            "quantity": 3
-          },
-          {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
-            "price": 45,
-            "quantity": 1
-          },
-          {
-            "uuid": "f82836e9-113e-4215-b336-4b925c6be67f",
-            "image": "http://localhost:3333/tiramisu-cake.jpg",
-            "name": "Tiramisu",
-            "description": "Mascarpone cream with biscuits soaked in coffee and Amaretto liqueur, sprinkled with dark chocolate",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 7,
-            "price": 16,
-            "quantity": 3
+            "quantity": 7
           }
         ]
       },
       {
-        "order_uuid": "5ddc15e4-b205-4d52-a39d-49b07d2a3b02",
-        "date": "2022-05-26 11:10",
-        "order_total": 151,
-        "order_production_cost": 62,
+        "order_uuid": "3e436e3f-2375-44df-9ec5-2fb44037a25b",
+        "date": "2022-06-03 15:00",
+        "order_total": 104,
+        "order_production_cost": 28,
         "status": "Preparing",
         "products": [
           {
-            "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
-            "image": "http://localhost:3333/brownie.jpg",
-            "name": "Brownie",
-            "description": "Classic brownie",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 8.2,
-            "price": 18.5,
+            "uuid": "cf36968c-1751-4683-a724-9d84d40cc3f0",
+            "image": "http://localhost:3333/macarons.jpg",
+            "name": "Makaronik",
+            "description": "Kolorowe, bezowe ciasteczka migdałowe przełożone delikatnym kremem waniliowym",
+            "allergyInfo": "Zawiera mleko i migdały",
+            "productionCost": 1.2,
+            "price": 4,
+            "quantity": 10
+          },
+          {
+            "uuid": "8826a801-c420-4a72-881d-93095c663c51",
+            "image": "http://localhost:3333/lemon-cake.jpg",
+            "name": "Ciasto cytrynowe",
+            "description": "Kruche ciasto cytrynowe z lukrem",
+            "allergyInfo": "Zawiera gluten",
+            "productionCost": 8,
+            "price": 32,
             "quantity": 2
-          },
-          {
-            "uuid": "d6f5f77a-d76e-4821-b0c1-5e95960d404d",
-            "image": "http://localhost:3333/chocolate-cookie.jpg",
-            "name": "Chocolate cookie",
-            "description": "A chocolate cookie filled with a melting blend of chocolates",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 3.5,
-            "price": 7,
-            "quantity": 3
-          },
-          {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
-            "price": 45,
-            "quantity": 1
-          },
-          {
-            "uuid": "f82836e9-113e-4215-b336-4b925c6be67f",
-            "image": "http://localhost:3333/tiramisu-cake.jpg",
-            "name": "Tiramisu",
-            "description": "Mascarpone cream with biscuits soaked in coffee and Amaretto liqueur, sprinkled with dark chocolate",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 7,
-            "price": 16,
-            "quantity": 3
           }
         ]
       },
       {
-        "order_uuid": "7c5c9hc6-2b5a-460a-aad0-882073838dab",
-        "date": "2022-05-26 11:00",
-        "order_total": 151,
-        "order_production_cost": 62.09,
+        "order_uuid": "792514c9-8bc6-4780-b7dc-a52f9b20da6d",
+        "date": "2022-06-06 18:15",
+        "order_total": 316,
+        "order_production_cost": 121.4,
         "status": "Declined",
         "products": [
           {
-            "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
-            "image": "http://localhost:3333/brownie.jpg",
-            "name": "Brownie",
-            "description": "Classic brownie",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 8.2,
-            "price": 18.5,
+            "uuid": "47a4959b-fe9b-42d7-9a64-4b1df60513af",
+            "image": "http://localhost:3333/raspberry-cake.jpg",
+            "name": "Ciasto z malinami",
+            "description": "Biszkoptowe ciasto z bitą śmietaną i malinami",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 13.5,
+            "price": 45,
             "quantity": 2
           },
           {
-            "uuid": "d6f5f77a-d76e-4821-b0c1-5e95960d404d",
-            "image": "http://localhost:3333/chocolate-cookie.jpg",
-            "name": "Chocolate cookie",
-            "description": "A chocolate cookie filled with a melting blend of chocolates",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 3.5,
-            "price": 7,
-            "quantity": 3
+            "uuid": "5260b68a-1d4e-4973-9a58-ebfc6be29ab1",
+            "image": "http://localhost:3333/oreo-cake.jpg",
+            "name": "Ciasto Oreo",
+            "description": "Duże ciasto Oreo z kakaowymi biszkoptami i nadzieniem mascarpone",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
+            "productionCost": 33,
+            "price": 68,
+            "quantity": 2
           },
           {
             "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
             "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
+            "name": "Ciasto z truskawkami",
+            "description": "Ciasto biszkoptowe z kremem i musem truskawowym, ozdobione owocami",
+            "allergyInfo": "Zawiera gluten, mleko i kakao",
             "productionCost": 14.2,
             "price": 45,
-            "quantity": 1
-          },
-          {
-            "uuid": "f82836e9-113e-4215-b336-4b925c6be67f",
-            "image": "http://localhost:3333/tiramisu-cake.jpg",
-            "name": "Tiramisu",
-            "description": "Mascarpone cream with biscuits soaked in coffee and Amaretto liqueur, sprinkled with dark chocolate",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 7,
-            "price": 16,
-            "quantity": 3
+            "quantity": 2
           }
         ]
       },
       {
-        "order_uuid": "7c5c9cg6-2b5a-460a-aad0-882073838dab",
-        "date": "2022-05-26 11:00",
-        "order_total": 151,
-        "order_production_cost": 62.09,
-        "status": "Preparing",
+        "order_uuid": "1d703946-934a-420b-9d20-f60accefb2f2",
+        "date": "2022-06-05 20:30",
+        "order_total": 55,
+        "order_production_cost": 18.7,
+        "status": "Declined",
         "products": [
           {
-            "uuid": "c96361e0-0574-4190-ba62-939fd5e8728f",
-            "image": "http://localhost:3333/brownie.jpg",
-            "name": "Brownie",
-            "description": "Classic brownie",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 8.2,
-            "price": 18.5,
-            "quantity": 2
-          },
-          {
-            "uuid": "d6f5f77a-d76e-4821-b0c1-5e95960d404d",
-            "image": "http://localhost:3333/chocolate-cookie.jpg",
-            "name": "Chocolate cookie",
-            "description": "A chocolate cookie filled with a melting blend of chocolates",
-            "allergyInfo": "Contains gluten, milk and cocoa",
+            "uuid": "2558067f-7172-423b-b2d4-6ed5165be2d1",
+            "image": "http://localhost:3333/vanilla-muffin.jpg",
+            "name": "Babeczka waniliowa",
+            "description": "Babeczka waniliowa z kremem i karmelizowaną wiśnią",
+            "allergyInfo": "Zawiera gluten i mlekok",
             "productionCost": 3.5,
-            "price": 7,
-            "quantity": 3
-          },
-          {
-            "uuid": "cdee8cac-8e5c-4c25-911b-1773793255af",
-            "image": "http://localhost:3333/strawberry-cake.jpg",
-            "name": "Strawberry cake",
-            "description": "Biscuit cake with cream and strawberry mousse, decorated with fruit",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 14.2,
-            "price": 45,
+            "price": 6,
             "quantity": 1
           },
           {
-            "uuid": "f82836e9-113e-4215-b336-4b925c6be67f",
-            "image": "http://localhost:3333/tiramisu-cake.jpg",
-            "name": "Tiramisu",
-            "description": "Mascarpone cream with biscuits soaked in coffee and Amaretto liqueur, sprinkled with dark chocolate",
-            "allergyInfo": "Contains gluten, milk and cocoa",
-            "productionCost": 7,
-            "price": 16,
-            "quantity": 3
+            "uuid": "cf36968c-1751-4683-a724-9d84d40cc3f0",
+            "image": "http://localhost:3333/macarons.jpg",
+            "name": "Makaronik",
+            "description": "Kolorowe, bezowe ciasteczka migdałowe przełożone delikatnym kremem waniliowym",
+            "allergyInfo": "Zawiera mleko i migdały",
+            "productionCost": 1.2,
+            "price": 4,
+            "quantity": 1
+          },
+          {
+            "uuid": "9d87931e-7996-4dd7-97f6-f420d73fc8bb",
+            "image": "http://localhost:3333/carrot-cake.jpg",
+            "name": "Ciasto marchewkowe",
+            "description": "Ciasto marchewkowe o głębokim smaku, z bitą śmietaną, posypane orzechami",
+            "allergyInfo": "Zawiera mleko i orzechy",
+            "productionCost": 14,
+            "price": 45,
+            "quantity": 1
           }
         ]
       }
