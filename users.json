@@ -3,7 +3,7 @@
     "isAdmin": true,
     "username": "admin",
     "password": "admin",
-    "token": 1651315418260
+    "token": 1654171520624
   },
   {
     "isManager": true,
@@ -15,15 +15,8 @@
     "name": "Great Test",
     "username": "test",
     "password": "12341234",
-    "token": 1654026335322,
+    "token": 1654172842377,
     "uuid": "d2b95caa-1ff8-4070-8ea0-1d7179c7e3a2"
-  },
-  {
-    "name": "Orest Tsolkovskyi",
-    "username": "orest",
-    "password": "12341234",
-    "token": 1651766001447,
-    "uuid": "e67d6e9f-2f1f-4df4-a8a1-a5a425d2da94"
   },
   {
     "name": "Eva Zduńczyk",
@@ -31,13 +24,6 @@
     "password": "12341234",
     "token": 1654010682696,
     "uuid": "e0a01a11-ae25-4093-96a8-21a62c2c3596"
-  },
-  {
-    "name": "Yaroslav Nykyforuk",
-    "username": "Slavik",
-    "password": "12341234",
-    "token": 1652526217736,
-    "uuid": "0fb3957d-8143-4c0c-9253-89940f47f814"
   },
   {
     "name": "Igor Kuropatwa",
@@ -52,5 +38,12 @@
     "password": "12341234",
     "token": 1654010850310,
     "uuid": "e50d6059-e7a0-491a-bb25-3b06d1da514d"
+  },
+  {
+    "name": "Orest Tsolkovskyi",
+    "username": "Orest",
+    "password": "12341234",
+    "token": 1654090393615,
+    "uuid": "69cfa953-c779-444d-9561-1528dccfbf91"
   }
 ]
