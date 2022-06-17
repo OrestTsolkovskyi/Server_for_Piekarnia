@@ -2,6 +2,7 @@ import fs from 'fs'
 import {readFile} from 'fs/promises';
 import _ from 'lodash';
 import x from "lodash";
+import url from 'node:url'
 
 export function handleTest(req, res) {
     return res.status(200).json({
@@ -132,7 +133,34 @@ export function handleAddOrders(req, res) {
     }
     fs.writeFileSync('ordersList.json', JSON.stringify(orders, null, 2), function (err) {
         console.log(err);
-    });
+    })
+
+    const kitchen = JSON.parse(fs.readFileSync('./kitchen.json'));
+    const dateObj = new Date(req.body.date);
+    const dayKey = req.body.date.split(' ')[0];
+    const shiftKey = `shift${Math.ceil((dateObj.getHours() + 1) / 8)}`;
+    const kitchenNewData = req.body.products.map(({ uuid, name, quantity }) => ({
+        uuid,
+        name,
+        quantity,
+        product_status: 'Ordered'
+    }));
+
+    if (!kitchen[dayKey]) {
+        kitchen[dayKey] = {
+            [shiftKey]: [...kitchenNewData]
+        }
+    } else {
+        kitchen[dayKey][shiftKey] = [
+            ...kitchen[dayKey]?.[shiftKey] || [],
+            ...kitchenNewData
+        ]
+    }
+
+    fs.writeFileSync('kitchen.json', JSON.stringify(kitchen, null, 2), function (err) {
+        console.log(err);
+    })
+
     return res.status(200).json({
         message: 'Order placed successfully'
     })
@@ -239,4 +267,62 @@ export async function handleAMDeclineOrder(req, res) {
     return res.status(200).json({
         message: 'Order declined'
     })
+}
+
+export async function handleChefLogout(req, res) {
+    const users = JSON.parse(await readFile('users.json'));
+
+    const chef = _.find(users, {token: +req.headers.authorization});
+    req.body.token = Date.now();
+
+    fs.writeFileSync('manager.json', JSON.stringify(chef, null, 2), function (err) {
+        console.log(err);
+    });
+
+    return res.status(200).json({
+        message: 'Success logout'
+    });
+}
+
+export function handleReports(req, res) {
+    const orders = JSON.parse(fs.readFileSync('ordersList.json'))
+    const { date: reportDate } = url.parse(req.url, true).query
+
+    const getShiftData = (shift) => orders.reduce((memo, user) => {
+            user.user_orders.forEach(({ date, order_production_cost, order_total }) => {
+                let [orderDay] = date.split(' ')
+                if (orderDay === reportDate && Math.ceil((new Date(date).getHours() + 1) / 8) === shift) {
+                    memo[`shift${shift}`].order_production_cost += order_production_cost;
+                    memo[`shift${shift}`].order_total += order_total
+                }
+            })
+            memo[`shift${shift}`].profit = memo[`shift${shift}`].order_total - memo[`shift${shift}`].order_production_cost
+            return memo
+        }, {
+            [`shift${shift}`]: {
+            order_production_cost: 0,
+            order_total: 0,
+            profit: 0
+        }})
+
+    const report = {
+        ...getShiftData(1),
+        ...getShiftData(2),
+        ...getShiftData(3)
+    }
+    return res.status(200).json(report)
+}
+
+export function handleChefGetOrders(req, res) {
+    const chefOrders = JSON.parse(fs.readFileSync('kitchen.json'))
+    const users = JSON.parse(fs.readFileSync('users.json'))
+
+    const user = _.find(users, {token: +req.headers.authorization})
+
+    if (user === undefined) {
+        return res.status(401).json({
+            message: 'Not found'
+        })
+    }
+    return res.status(200).json(chefOrders)
 }

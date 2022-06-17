@@ -3,7 +3,7 @@
     "isAdmin": true,
     "username": "admin",
     "password": "admin",
-    "token": 1654171520624
+    "token": 1654373971321
   },
   {
     "isManager": true,
@@ -12,10 +12,16 @@
     "token": 1649879922902
   },
   {
+    "isChef": true,
+    "username": "chef",
+    "password": "chef",
+    "token": 1649879922904
+  },
+  {
     "name": "Great Test",
     "username": "test",
     "password": "12341234",
-    "token": 1654172842378,
+    "token": 1654250393269,
     "uuid": "d2b95caa-1ff8-4070-8ea0-1d7179c7e3a2"
   },
   {
@@ -45,5 +51,12 @@
     "password": "12341234",
     "token": 1654090393615,
     "uuid": "69cfa953-c779-444d-9561-1528dccfbf91"
+  },
+  {
+    "name": "Cool test",
+    "username": "test2",
+    "password": "12341234",
+    "token": 1654181996475,
+    "uuid": "43ae8e7a-11cd-414d-be38-9dac6de8224c"
   }
 ]

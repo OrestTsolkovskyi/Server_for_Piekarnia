@@ -1,6 +1,6 @@
 {
-  "isAdmin": true,
-  "username": "admin",
-  "password": "admin",
-  "token": 1651315418260
+  "isChef": true,
+  "username": "chef",
+  "password": "chef",
+  "token": 1649879922904
 }

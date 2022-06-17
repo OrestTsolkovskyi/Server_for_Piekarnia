@@ -1,0 +1,26 @@
+{
+  "2022-06-17": {
+    "shift1": [
+      {
+        "uuid": "9d87931e-7996-4dd7-97f6-f420d73fc8bb",
+        "name": "Ciasto marchewkowe",
+        "quantity": 1,
+        "product_status": "Ordered"
+      }
+    ],
+    "shift2": [
+      {
+        "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
+        "name": "Szarlotka",
+        "quantity": 1,
+        "product_status": "Ordered"
+      },
+      {
+        "uuid": "3b629a89-f4ed-43e8-99d5-d6f4645348a0",
+        "name": "Ciasto z borówkami",
+        "quantity": 1,
+        "product_status": "Ordered"
+      }
+    ]
+  }
+}

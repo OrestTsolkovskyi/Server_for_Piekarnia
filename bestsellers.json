@@ -1,7 +1,7 @@
 [
   {
     "uuid": "bded6514-9bf2-427c-ba04-1fe552dbbd72",
-    "image": "http://localhost:3333/apple-pie.jpg",
+    "image": "gallery/apple-pie.jpg",
     "name": {
       "en-US": "Apple pie",
       "pl": "Szarlotka"
@@ -19,7 +19,7 @@
   },
   {
     "uuid": "9c6f4173-b098-4e5e-9951-fb64d5db8c7a",
-    "image": "http://localhost:3333/cherry-cake.jpg",
+    "image": "gallery/cherry-cake.jpg",
     "name": {
       "en-US": "Cherry cake",
       "pl": "Ciasto z wiśniami"
@@ -37,7 +37,7 @@
   },
   {
     "uuid": "e85de873-9b97-42be-91ca-edcaf4fe9983",
-    "image": "http://localhost:3333/chocolate-donut.jpg",
+    "image": "gallery/chocolate-donut.jpg",
     "name": {
       "en-US": "Chocolate cake",
       "pl": "Ciasto czekoladowe"
@@ -55,7 +55,7 @@
   },
   {
     "uuid": "07dcea6e-714f-44f7-bd3e-ff16ab4c4e7b",
-    "image": "http://localhost:3333/chocolate-muffin.jpg",
+    "image": "gallery/chocolate-muffin.jpg",
     "name": {
       "en-US": "Chocolate cookie",
       "pl": "Ciasteczko czekoladowe"
@@ -73,7 +73,7 @@
   },
   {
     "uuid": "5260b68a-1d4e-4973-9a58-ebfc6be29ab1",
-    "image": "http://localhost:3333/oreo-cake.jpg",
+    "image": "gallery/oreo-cake.jpg",
     "name": {
       "en-US": "Oreo cake",
       "pl": "Ciasto Oreo"
@@ -91,7 +91,7 @@
   },
   {
     "uuid": "2558067f-7172-423b-b2d4-6ed5165be2d1",
-    "image": "http://localhost:3333/vanilla-muffin.jpg",
+    "image": "gallery/vanilla-muffin.jpg",
     "name": {
       "en-US": "Vanilla muffin",
       "pl": "Babeczka waniliowa"
