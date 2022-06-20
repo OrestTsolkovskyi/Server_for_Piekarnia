@@ -73,10 +73,10 @@ export async function handleGetProducts(req, res) {
         })
     }
     return res.status(200).send(JSON.stringify(products.map((product) => {
-        product.name = product.name[language]
-        product.description = product.description[language]
-        product.allergyInfo = product.allergyInfo[language]
-        return product
+            product.name = product.name[language]
+            product.description = product.description[language]
+            product.allergyInfo = product.allergyInfo[language]
+            return product
         }
     ), null, 2))
 }
@@ -139,7 +139,8 @@ export function handleAddOrders(req, res) {
     const dateObj = new Date(req.body.date);
     const dayKey = req.body.date.split(' ')[0];
     const shiftKey = `shift${Math.ceil((dateObj.getHours() + 1) / 8)}`;
-    const kitchenNewData = req.body.products.map(({ uuid, name, quantity }) => ({
+
+    const kitchenNewData = req.body.products.map(({uuid, name, quantity}) => ({
         uuid,
         name,
         quantity,
@@ -150,6 +151,17 @@ export function handleAddOrders(req, res) {
         kitchen[dayKey] = {
             [shiftKey]: [...kitchenNewData]
         }
+    } else if (kitchen[dayKey][shiftKey]) {
+        kitchenNewData.forEach((requestProduct) => {
+            kitchen[dayKey][shiftKey].forEach((kitchenProduct) => {
+                if (kitchenProduct.uuid === requestProduct.uuid && !requestProduct.omit) {
+                    kitchenProduct.quantity += requestProduct.quantity
+                    requestProduct.omit = true
+                }
+            })
+        })
+
+        kitchen[dayKey][shiftKey].push(...kitchenNewData.filter(({omit}) => !omit))
     } else {
         kitchen[dayKey][shiftKey] = [
             ...kitchen[dayKey]?.[shiftKey] || [],
@@ -187,7 +199,7 @@ export async function handleUserStatusProgress(req, res) {
 
     const result = orders.map(({user_uuid, user_orders}) => ({
         user_uuid,
-        declinedCount: user_orders.filter(({status}) => status === 'Preparing').length/user_orders.length * 100
+        declinedCount: user_orders.filter(({status}) => status === 'Preparing').length / user_orders.length * 100
     }))
     console.log(result)
     return res.status(200).json(result)
@@ -286,24 +298,25 @@ export async function handleChefLogout(req, res) {
 
 export function handleReports(req, res) {
     const orders = JSON.parse(fs.readFileSync('ordersList.json'))
-    const { date: reportDate } = url.parse(req.url, true).query
+    const {date: reportDate} = url.parse(req.url, true).query
 
     const getShiftData = (shift) => orders.reduce((memo, user) => {
-            user.user_orders.forEach(({ date, order_production_cost, order_total }) => {
-                let [orderDay] = date.split(' ')
-                if (orderDay === reportDate && Math.ceil((new Date(date).getHours() + 1) / 8) === shift) {
-                    memo[`shift${shift}`].order_production_cost += order_production_cost;
-                    memo[`shift${shift}`].order_total += order_total
-                }
-            })
-            memo[`shift${shift}`].profit = memo[`shift${shift}`].order_total - memo[`shift${shift}`].order_production_cost
-            return memo
-        }, {
-            [`shift${shift}`]: {
+        user.user_orders.forEach(({date, order_production_cost, order_total}) => {
+            let [orderDay] = date.split(' ')
+            if (orderDay === reportDate && Math.ceil((new Date(date).getHours() + 1) / 8) === shift) {
+                memo[`shift${shift}`].order_production_cost += order_production_cost;
+                memo[`shift${shift}`].order_total += order_total
+            }
+        })
+        memo[`shift${shift}`].profit = memo[`shift${shift}`].order_total - memo[`shift${shift}`].order_production_cost
+        return memo
+    }, {
+        [`shift${shift}`]: {
             order_production_cost: 0,
             order_total: 0,
             profit: 0
-        }})
+        }
+    })
 
     const report = {
         ...getShiftData(1),
@@ -325,4 +338,38 @@ export function handleChefGetOrders(req, res) {
         })
     }
     return res.status(200).json(chefOrders)
+}
+
+export async function handleKitchenOrderStatus(req, res) {
+    const {ordersDate, shiftKey, order, status} = req.body;
+    const kitchenOrders = JSON.parse(fs.readFileSync('kitchen.json'))
+    const ordersList = JSON.parse(fs.readFileSync('ordersList.json'))
+
+    const currentOrder = _.find(
+        kitchenOrders[ordersDate][shiftKey],
+        {uuid: order.uuid}
+    )
+    currentOrder.product_status = status
+
+    ordersList.forEach(({user_orders}) => {
+        user_orders.forEach(({products}) => {
+            products.forEach((product) => {
+                if (product.uuid === order.uuid) {
+                    product.product_status = status
+                    product.sell_status = status === 'Done' ? 'Ready to sell' : 'Waiting'
+                }
+            })
+        })
+    })
+
+    fs.writeFileSync('kitchen.json', JSON.stringify(kitchenOrders, null, 2), function (err) {
+        console.log(err);
+    });
+    fs.writeFileSync('ordersList.json', JSON.stringify(ordersList, null, 2), function (err) {
+        console.log(err);
+    });
+
+    return res.status(200).json({
+        message: 'Status changed'
+    })
 }

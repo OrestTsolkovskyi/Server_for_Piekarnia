@@ -77,7 +77,8 @@ import {
     handleUserStatusProgress,
     handleChefLogout,
     handleChefGetOrders,
-    handleReports
+    handleReports,
+    handleKitchenOrderStatus
 } from './handlers.js';
 
 //User
@@ -106,6 +107,7 @@ app.post('/removeOrderItem', handleRemoveOrderItem)
 app.post('/declineOrder', handleAMDeclineOrder)
 
 app.post('/changeStatus', handleChangeStatus)
+app.post('/changeKitchenOrderStatus', handleKitchenOrderStatus)
 app.get('/chefAllOrders', handleChefGetOrders)
 
 // ... other handlers you write
